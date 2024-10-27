@@ -1,14 +1,22 @@
-@import "./components/reset",
-        "./components/header";
+@import "./components/reset", "./components/header", "./components/hero";
 
-body {
-  background-color: black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+    scroll-behavior: smooth;
+
+    body {
+        background-color: black;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    
+        .page {
+            position: relative;
+            width: 1440px;
+            margin: auto;
+            height: 2000px;
+        }
+    }
 }
 
-.page {
-  width: 1400px;
-  margin: auto;
-  height: 5000px;
-}
+
+
+

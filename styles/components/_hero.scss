@@ -1,0 +1,64 @@
+@use "./variables";
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes drop {
+    to {
+        transform: translateY(550px);
+    }
+}
+
+.hero {
+    overflow: clip;
+    height: 800px;
+    background: url("../../assets/images/hero-background.png") center/cover;
+    position: relative;
+    z-index: -6;
+
+    .hero__glow_animation_pumpkin {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -3;
+        background: url("../../assets/images/hero-background-glow.png")
+            center/cover;
+        animation: pulse 4s infinite ease-out alternate;
+    }
+
+    .hero__glow_animation_cat {
+        position: absolute;
+        z-index: -4;
+        height: 100%;
+        width: 100%;
+        background: url("../../assets/images/hero-background-cat.png")
+            center/cover;
+    }
+
+    .hero__title {
+        font-family: "Oswald";
+        font-weight: 600;
+        color: white;
+        font-size: 66px;
+        max-width: 700px;
+        position: absolute;
+        z-index: -5;
+        top: 250px;
+        right: -50px;
+        text-shadow: 0 0 20px black;
+        animation: drop linear;
+        animation-timeline: scroll();
+
+        .hero__accent {
+            font-family: "Raleway";
+            color: variables.$accent-color;
+            font-weight: 900;
+        }
+    }
+}
