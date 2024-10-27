@@ -1,0 +1,14 @@
+@import "./components/reset",
+        "./components/header";
+
+body {
+  background-color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+  width: 1400px;
+  margin: auto;
+  height: 5000px;
+}

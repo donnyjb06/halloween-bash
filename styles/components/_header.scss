@@ -1,0 +1,38 @@
+@use "./variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  color: variables.$primary-font-color;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.header__logo {
+  width: 50px;
+}
+
+.header__list {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.header__link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.5s ease, 
+             scale 0.5s ease;
+}
+
+.header__link:hover {
+  color: variables.$accent-color;
+  scale: 1.05;
+}
