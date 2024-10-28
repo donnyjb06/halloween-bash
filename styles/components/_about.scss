@@ -1,0 +1,70 @@
+@use "./variables";
+
+@keyframes fly-in-left {
+  from {
+    transform: translateX(-160%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fly-in-right {
+  from {
+    transform: translate(130%, -50%);
+  }
+  to {
+    transform: translate(0%, -50%);
+  }
+}
+
+.about {
+    height: 800px;
+    background: url("../../assets/images/about-bg.png") center/cover;
+    position: relative;
+    z-index: 1;
+    color: variables.$primary-font-color;
+    font-family: "Oswald";
+    font-size: variables.$header-size;
+    overflow: clip;
+
+    .about__image {
+        position: relative;
+        z-index: 0;
+        width: 800px;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 0 0 30px black;
+        animation: fly-in-left linear;
+        animation-timeline: view();
+        animation-range: 400px 900px;
+    }
+
+    .about__content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        text-shadow: 0 0 10px black;
+        max-width: 575px;
+        animation: fly-in-right linear;
+        animation-timeline: view();
+        animation-range: entry;
+
+        .about__title {
+            letter-spacing: 3px;
+            color: variables.$accent-color;
+        }
+
+        .about__details {
+            position: relative;
+            font-weight: 400;
+            font-size: variables.$body-text-size;
+            text-shadow: 0 0 5px black;
+        }
+    }
+}

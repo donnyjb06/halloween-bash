@@ -1,4 +1,5 @@
-@import "./components/reset", "./components/header", "./components/hero";
+@import "./components/reset", "./components/header", "./components/hero",
+    "./components/about", "./components/footer";
 
 html {
     scroll-behavior: smooth;
@@ -7,16 +8,11 @@ html {
         background-color: black;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-    
+
         .page {
             position: relative;
             width: 1440px;
             margin: auto;
-            height: 2000px;
         }
     }
 }
-
-
-
-

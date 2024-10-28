@@ -47,6 +47,15 @@
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.5s ease, scale 0.5s ease;
+  }
+
+  .header__cta:hover {
+    background-color: variables.$primary-color;
+  }
+
+  .header__cta:active {
+    scale: 0.9;
   }
 }
 

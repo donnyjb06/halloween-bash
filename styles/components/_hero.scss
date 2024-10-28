@@ -11,7 +11,7 @@
 
 @keyframes drop {
     to {
-        transform: translateY(550px);
+        transform: translateY(2000px);
     }
 }
 
@@ -29,7 +29,7 @@
         z-index: -3;
         background: url("../../assets/images/hero-background-glow.png")
             center/cover;
-        animation: pulse 4s infinite ease-out alternate;
+        animation: pulse 2.5s infinite ease-out alternate;
     }
 
     .hero__glow_animation_cat {
@@ -54,11 +54,14 @@
         text-shadow: 0 0 20px black;
         animation: drop linear;
         animation-timeline: scroll();
+        letter-spacing: -2.6px;
 
         .hero__accent {
             font-family: "Raleway";
             color: variables.$accent-color;
             font-weight: 900;
+            letter-spacing: 0;
+            
         }
     }
 }
